@@ -44,10 +44,10 @@ return {
   { "jose-elias-alvarez/nvim-lsp-ts-utils" }, -- Extra TypeScript support for formatting, imports, etc.
   -- Optional: Icon support for completion
   { "onsails/lspkind-nvim" }, -- Adds vscode-like icons in autocompletion
-  {
-    "vuejs/vetur", -- Vue.js syntax highlighting, snippets, and LSP
-    ft = "vue",
-  },
+  -- {
+  --   "vuejs/vetur", -- Vue.js syntax highlighting, snippets, and LSP
+  --   ft = "vue",
+  -- },
   {
     "nvim-tree/nvim-web-devicons",
     config = function()
