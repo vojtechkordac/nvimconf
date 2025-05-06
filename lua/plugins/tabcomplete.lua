@@ -19,10 +19,10 @@ return {
     -- See the full "keymap" documentation for information on defining your own keymap.
     keymap = {
       preset = "super-tab",
+      ["<CR>"] = { "accept", "fallback" },
       -- You can explicitly define behaviors for Tab and Enter here:
-      ["<Tab>"] = { "select_next", "fallback" }, -- Tab will select next completion
-      ["<S-Tab>"] = { "select_prev", "fallback" }, -- Shift+Tab will select previous completion
-      ["<CR>"] = { "accept", "fallback" }, -- Enter will confirm the selected completion
+      -- ["<Tab>"] = { "accept", "fallback" }, -- Tab will select next completion
+      -- ["<S-Tab>"] = { "select_prev", "fallback" }, -- Shift+Tab will select previous completion
     },
     -- keymap = {
     --   preset = "default",
@@ -44,6 +44,14 @@ return {
     -- elsewhere in your config, without redefining it, due to `opts_extend`
     sources = {
       default = { "lsp", "path", "snippets", "buffer" },
+    },
+    completion = {
+      list = {
+        selection = {
+          preselect = false,
+          auto_insert = true,
+        },
+      },
     },
   },
   opts_extend = { "sources.default" },
